@@ -4,6 +4,7 @@ import torch.nn.functional as F
 import numpy as np
 import utlz
 
+
 class Squeeze(nn.Module):
     def __init__(self):
         super().__init__()
@@ -308,7 +309,8 @@ class Inveritible_Decolorization(nn.Module):
 if __name__ == "__main__":
     import cv2
     import matplotlib.pyplot as plt
-    img_name = "/media/ruizhao/programs/datasets/Denoising/testset/Kodak24/kodim04.png"
+
+    img_name = "1.jpg"
 
     image_c = cv2.imread(img_name, cv2.IMREAD_COLOR)[:, :, ::-1] / 255
     image_c = cv2.resize(image_c, dsize=(256, 256), interpolation=cv2.INTER_LINEAR)
